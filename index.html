@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
+    <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="favi" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -13,6 +19,18 @@
   <body class="page">
     <header class="header"></header>
     <main></main>
+    <dialog class="dialog" id="modal-wondow" aria-label="Dialog-window">
+      <section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39"
+        class="svg-save-as">
+        <use href="#"></use>
+        </svg>
+        <p class="dialog-text">Вставьте дискету, чтобы продолжить</p>
+      </section>
+      <form method="dialog" class="dialog-button-OK">
+        <button class="dialog-button button-close"></button>
+      </form>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
