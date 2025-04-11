@@ -27,40 +27,89 @@
     <main class="cards__block">
       <article class="card">
         <div class="card__header">
-          <h3 class="card__header-subtitle"> 0 Фритрек и нулевой спринт: Подготовка к работе</h3>
+          <h3 class="card__header-subtitle">Фритрек и нулевой спринт: Подготовка к работе</h3>
         </div>
         <img class="card__image" src="./images/start-sprint.png" alt="Иллюстрация начала обучения">
         <div class="card__content">
           <p class="card__text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. 
             И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
-
-        <button class="card__icon-button" aria-label="Лайк">
-        <!-- SVG иконка сердца -->
-          <svg class="like-icon" width="20" height="20" viewBox="0 0 20 20">
-            <path d="M10 18.35L8.55 17.03C3.4 12.36 0 9.28 0 5.5 0 2.42 2.42 0 5.5 0 7.24 0 8.91 0.81 10 2.09 11.09 0.81 12.76 0 14.5 0 17.58 0 20 2.42 20 5.5c0 3.78-3.4 6.86-8.55 11.54L10 18.35z"/>
-          </svg>
-        </button>
-          
-          <!-- Кнопка Like -->
-          <button class="card__like-button">
-            <span class="button__text">Like</span>
-          </button>
+          <p>Место для ваших воспоминаний о начале обучения.</p>
         </div>
-      
+
+        <div class="card-footer">
+          <div class="card-buttons">
+            <button class="card__icon-button" aria-label="Лайк">
+              <!-- SVG иконка сердца -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+                <path d="M6 0H3v3h3V0ZM9 0H6v3h3V0ZM3 3H0v3h3V3ZM3 6H0v3h3V6ZM3 9H0v3h3V9ZM12 0H9v3h3V0ZM6 12H3v3h3v-3ZM9 15H6v3h3v-3ZM12 18H9v3h3v-3ZM21 0h3v3h-3V0ZM18 0h3v3h-3V0ZM24 3h3v3h-3V3ZM24 6h3v3h-3V6ZM24 9h3v3h-3V9ZM15 0h3v3h-3V0ZM21 12h3v3h-3v-3ZM18 15h3v3h-3v-3ZM15 18h3v3h-3v-3ZM15 3h-3v3h3V3ZM15 21h-3v3h3v-3Z"/>
+              </svg>
+              </button>
+                <!-- Кнопка Like -->
+                <button class="card__like-button">
+                  <span class="button__text">Like</span>
+                </button>
+          </div>
+        </div>
       </article>
 
+      <article class="card">
+        <div class="card__header">
+          <h3 class="card__header-subtitle">1 спринт: Я — чистый лист</h3>
+        </div>
+        <img class="card__image" src="./images/sprint1.png" alt="Иллюстрация 1 спринта">
+        <div class="card__content">
+          <p class="card__text">На первых этапах мы работали со страхами и сомнениями, которые часто испытывают новички. Один из них — страх перед чистым листом. Это, конечно же, намного сложнее, чем боязнь куска бумаги. Часто за этим ощущением скрываются более глубокие вопросы: 
+            с чего начать? а вдруг будет слишком сложно? что, если я не справлюсь?</p>
+          <p>Место для ваших воспоминаний о начале первого спринта.</p>
+        </div>
 
+        <div class="card-footer">
+          <div class="card-buttons">
+            <button class="card__icon-button" aria-label="Лайк">
+              <!-- SVG иконка сердца -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+                <use href="./svg/sprite.svg#heart-default"></use>
+           
+              </svg>
+              </button>
+                <!-- Кнопка Like -->
+                <button class="card__like-button">
+                  <span class="button__text">Like</span>
+                </button>
+          </div>
+        </div>
+      </article>
     </main>
+    <footer>
+      <div class="card-buttons-save">
+        <button class="card__icon-button" aria-label="Сэйв">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39"
+          class="svg-save-as">
+          <use href="./svg/sprite.svg#save-icon"></use>
+          </svg>
+  
+        </button>
+        <button class="">
+          <span class="button__text">Сохранить на память</span> 
+        </button>
+      </div>
+    </footer>
+    
+
+
+
     <dialog class="dialog" id="modal-wondow" aria-label="Dialog-window">
       <section>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39"
         class="svg-save-as">
-        <use href="./svg/sprite.img"></use>
+        <use href="./svg/sprite.svg#save-icon"></use>
         </svg>
         <p class="dialog-text">Вставьте дискету, чтобы продолжить</p>
       </section>
       <form method="dialog" class="dialog-button-OK">
-        <button class="dialog-button button-close"></button>
+        <button class="dialog-button button-close">
+          <span class="button-text">Ok</span>
+        </button>
       </form>
     </dialog>
     <script src="./scripts/like.js"></script>

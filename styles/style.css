@@ -21,7 +21,7 @@ body {
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  padding: 100px 0;
+  /*padding: 100px 0;*/
   position: relative;
   background-position: center;
   background-size: cover;
@@ -32,11 +32,11 @@ body {
 
 .image {
   background-image: url(../images/background.png);
+  background-repeat: no-repeat;
   width: 100%;
   max-width: 1440px;
   height: 960px;
-  background-size: cover;
-  background-position: center;
+ 
 }
 
 .header {
@@ -46,19 +46,14 @@ body {
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  width: 696px;
-  height: 364px;
+  width: clamp(371px, 50vw + 100px, 696px);
+  height: clamp(323px, 3.85vw + 308.56px, 364px);
   background-color: var(--bg-color, #fff);
   border: 2px solid #000;
-  margin: 102px auto 0;
-  
+  margin: 102px auto 104px;
   font-family: var(--press-font);
+  line-height: var(--header-line-height);
   color: black;
-  
-  @media (min-width >= 375px) {
-    height: 327px;
-    width: 371px
-  }
 }
 
 h1 {
@@ -80,18 +75,31 @@ line-height: normal;
 text-transform: uppercase;
 }
 
+.cards__block {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+
+  @media (width >= 375px) {
+    gap: 50px;
+  }
+}
+
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 696px;
-  height: 951px;
-  border: 1px solid #000;
+  width: clamp(371px, 50vw + 100px, 696px);
+  /*height: 951px;*/
+  border: 2px solid #000;
   background-color: #fff;
-  margin: 107px auto 50px;
-
+  margin:  auto;
+  font-size: var(--main-font-size, 18px);
+  font-weight: var(--font-weight);
+  line-height: var(--main-line-height, 21px);
+  font-family: var(--inter-font);
 }
 
 .card__header {
@@ -107,9 +115,9 @@ text-transform: uppercase;
 .card__header-subtitle {
   align-self: flex-start;
   margin-left: 10px;
+
+
 }
-
-
 
 .card__image {
   display: block;
@@ -122,6 +130,101 @@ text-transform: uppercase;
 }
 
 .card__content {
-  height: 224px;
+  /*height: 224px;*/
   color: var(--main-text-color, #000);
+  font-family: var(--inter-font);
+  padding: 25px 28.5px 0 28.5px;
+  /*margin-bottom: 25px;*/
+}
+
+p + p {
+  margin-top: 27px;
+  margin-bottom: 25px;
+}
+
+.card-footer {
+  position: relative;
+  width: 100%;
+}
+
+.card-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: var(--button-font-size);
+  line-height: var(--button-line-height);
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+
+
+.card__like-button {
+  display: flex;
+  width: 118px;
+  padding: 9px 17px;
+  justify-content: center;
+  /*align-items: right;*/
+  gap: 12px;
+  border: 2px solid var(--contur-color, #000);
+  color: var(--main-text-color);
+  font-family: var(--press-font);
+  background-color: var(--bg-color);
+  margin-right: 25px;
+}
+
+
+/*.card__save-button {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 54px;
+  background-color: var(--bg-color);
+  color: var(--main-text-color);
+  border: 2px solid var(--border-card-color, #000);
+  font-family: var(--press-font);
+  font-size: var(--button-font-size);
+  line-height: var(--button-line-height);
+}*/
+
+.card-buttons-save {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: clamp(306px, 306px + (335 - 306) * ((100vw - 375px) / (1440 - 375)), 335px);
+  height: clamp(51px, 80px - (80 - 51) * ((100vw - 375px) / (1440 - 375)), 80px);
+  margin: 54px auto 105px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-card-color, #000);
+  font-family: var(--press-font);
+  font-size: var(--button-font-size);
+  line-height: var(--button-line-height);
+
+  @media (width >= 1440px) {
+    flex-direction: row;
+  }
+}
+
+/*.button__save {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 51px;
+
+}*/
+
+.button__text {
+
+}
+
+.svg-save-as {
+  width: 39px;
+  height: 39px;
+  justify-content: center;
+  align-items: center;
+  
 }
