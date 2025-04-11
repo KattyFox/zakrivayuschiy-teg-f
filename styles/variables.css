@@ -1,1 +1,17 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+--inter-font: 'Inter-Variable',Arial, Helvetica, sans-serif;
+--press-font: 'Press Start 2P', Arial, Helvetica, sans-serif;
+--main-font-size: 18px;
+--button-font-size: 14px;
+--font-weight: 400;
+--border-card-color: #000;
+--h1-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+--h2-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+--bg-color: #fff;
+--accent-color: #000;
+--contur-color: #000;
+--main-text-color: #000;
+--text-stroke-color: #fff;
+--animation-fill-color: rgb(255 0 0);
+}
