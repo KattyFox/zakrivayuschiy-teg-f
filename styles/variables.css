@@ -4,6 +4,7 @@
 --press-font: 'Press Start 2P', Arial, Helvetica, sans-serif;
 --main-font-size: 18px;
 --button-font-size: 14px;
+--wt-font-size: 14px;
 --font-weight: 400;
 --main-line-height: 21px;
 --header-line-height: normal;
@@ -17,4 +18,7 @@
 --main-text-color: #000;
 --text-stroke-color: #fff;
 --animation-fill-color: rgb(255 0 0);
+--stroke-color: #000;
+--label-color: #fff;
+--label-blend-mode: hard-light;
 }
