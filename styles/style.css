@@ -34,10 +34,12 @@ body {
   background-image: url(../images/background.png);
   background-repeat: no-repeat;
   width: 100%;
-  max-width: 1440px;
-  height: 960px;
- 
+  background-position: top;
+  height: clamp(667px, calc(667px + (960 - 667) * ((100vw - 375px) / (1440 - 375))), 960px);
+  background-size: clamp(357px, 100%, 1440px) clamp(667px, calc(667px + (960 - 667) * ((100vw - 375px) / (1440 - 375))), 960px);
 }
+
+
 
 .header {
   position: relative;
@@ -152,6 +154,14 @@ text-transform: uppercase;
     -2px 0 0 var(--label-stroke),
     0 2px 0 var(--label-stroke),
     0 -2px 0 var(--label-stroke);
+
+    @media (width >= 1440px) {
+      .card__watermark {
+        top: 25px;
+        right: 25px;
+        font-size: 14px;
+      }
+    }
 
     @media (width >= 375px) {
       .card__watermark {
