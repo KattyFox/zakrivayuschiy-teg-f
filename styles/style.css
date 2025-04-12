@@ -115,7 +115,9 @@ text-transform: uppercase;
 .card__header-subtitle {
   align-self: flex-start;
   margin-left: 10px;
-
+  align-items: center;
+  min-height: 100%;
+  font-family: var(--inter-font, sans-serif);
 }
 
 /* Обёртка для изображения */
@@ -129,8 +131,10 @@ text-transform: uppercase;
 /* Лейбл HTML */
 .card__label {
   position: absolute;
-  top: 37px;
-  right: 10px;
+  top: 60px;
+  right: 25px;
+  /*top: clamp(23px, 1.5vw + 19px, 25px);
+  right: clamp(11px, 1vw + 8px, 25px);*/
   font-family: var(--press-font), sans-serif;
   font-weight: 700;
   font-size: var(--wt-font-size);
@@ -148,6 +152,14 @@ text-transform: uppercase;
     -2px 0 0 var(--label-stroke),
     0 2px 0 var(--label-stroke),
     0 -2px 0 var(--label-stroke);
+
+    @media (width >= 375px) {
+      .card__watermark {
+        top: 23px;
+        right: 11px;
+        font-size: 14px;
+      }
+    }
 }
 
 
@@ -165,12 +177,11 @@ text-transform: uppercase;
 
 .card__image {
   display: block;
-  /*height: 696px;*/
   inline-size: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   object-position: center;
-  position: relative;
+  /*position: relative;*/
   aspect-ratio: 1 /1;
 
 }
