@@ -268,7 +268,7 @@ p + p {
   } 
 }
 
-.icon-like-me {
+.like-icon {
   background-color: var(--bg-color);
   width: 27px;
   height: 24px;
@@ -343,4 +343,27 @@ p + p {
 }
 
 
+/* Modal Window*/
 
+.dialog {
+  width: 357px;
+  min-height: 195px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: fixed;
+
+  @media (width >= 375px) {
+    width: 341px;
+    min-height: 195px;
+  }
+}
+
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
