@@ -135,8 +135,6 @@ text-transform: uppercase;
   position: absolute;
   top: 60px;
   right: 25px;
-  /*top: clamp(23px, 1.5vw + 19px, 25px);
-  right: clamp(11px, 1vw + 8px, 25px);*/
   font-family: var(--press-font), sans-serif;
   font-weight: 700;
   font-size: var(--wt-font-size);
@@ -171,7 +169,6 @@ text-transform: uppercase;
     }
 }
 
-
 @supports ((-webkit-text-stroke: 1px var(--text-stroke-color)) or (text-stroke: 1px var(--text-stroke-color))){
   .card__label {
     -webkit-text-stroke: 0.01px var(--text-stroke-color);
@@ -182,10 +179,8 @@ text-transform: uppercase;
 
 .card__icon-button{
   background-color: var(--bg-color);
-  /*border: none; /* Убираем стандартную рамку */
-  /*padding: 0; Убираем внутренние отступы */
-  /*box-shadow: none;  Отключаем тень */
   outline: none;
+  display: flex;
 }
 
 .card__image {
@@ -270,15 +265,14 @@ p + p {
   @media (width >= 375px) {
     width: 28px;
     height: 28px;
-  }
-
-  
+  } 
 }
 
 .icon-like-me {
   background-color: var(--bg-color);
   width: 27px;
   height: 24px;
+ 
 }
 
 .button__text {
