@@ -384,6 +384,10 @@ p + p {
 /* Modal Window*/
 
 .dialog {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  align-items: center;
   width: 357px;
   min-height: 195px;
   padding: 0;
@@ -396,11 +400,30 @@ p + p {
   text-transform: uppercase;
   font-family: var(--press-font);
 
+ 
+
   @media (width >= 375px) {
     width: 341px;
     min-height: 195px;
   }
 }
+
+.svg-save-as {
+  width: 39px;
+  height: 39px;
+}
+
+
+.dialog-text {
+  padding: 31.5px 32.5px 0 90.5px;
+  word-break: break-word;
+
+  @media (width <=375px) {
+    padding: 32px 42px 0 101px;    
+  }
+}
+
+
 
 .dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
