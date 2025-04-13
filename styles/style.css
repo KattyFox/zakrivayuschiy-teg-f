@@ -178,9 +178,19 @@ text-transform: uppercase;
 }
 
 .card__icon-button{
-  background-color: var(--bg-color);
+  background-color: transparent;
+  outline: 2px solid transparent;
   outline: none;
   display: flex;
+  justify-content: center;
+}
+
+.card__icon-button:hover {
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
 }
 
 .button:focus {
