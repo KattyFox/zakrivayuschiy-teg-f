@@ -387,13 +387,14 @@ p + p {
   width: 357px;
   min-height: 195px;
   padding: 0;
-  margin: 0;
   border: none;
-  border-radius: 12px;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--bg-color);
+  color: var(--main-text-color);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  font-size: var(--button-font-size);
   position: fixed;
+  text-transform: uppercase;
+  font-family: var(--press-font);
 
   @media (width >= 375px) {
     width: 341px;
