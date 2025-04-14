@@ -236,15 +236,10 @@ text-transform: uppercase;
   justify-content: center;
   align-items: center;
   color: var(--main-text-color);
+  
 }
 
-.button__text::before {
-  position: relative;
-  color: var(--hover-text-button-color);
-  mix-blend-mode: difference;
-  z-index: 5;
-  transition: color 0.3s ease-in-out;
-}
+
 
 
 .card__like-button {
@@ -272,6 +267,15 @@ text-transform: uppercase;
 
 .card__like-button:hover::before {
   transform: scaleX(1);
+}
+
+
+.button__text::before {
+  content: "";
+  position: relative;
+  mix-blend-mode: difference; /* Инверсия цвета */
+  transition: color 0.1s; 
+  z-index: 2;
 }
 
 
