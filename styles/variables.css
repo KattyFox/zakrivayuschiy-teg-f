@@ -24,4 +24,12 @@
 --stroke-color: #000;
 --label-color: #fff;
 --label-blend-mode: hard-light;
+
+--sparks-color: red;
+--countour-color: black;
+--core-color:black;
+--main-body-color:black;
+
+--color-active : red;
+--color-inactive: black;
 }
