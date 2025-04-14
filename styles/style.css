@@ -421,10 +421,12 @@ p + p {
 
 /* Modal Window*/
 
+
+
+
 .dialog {
-  /* display: block;  */
+  flex-direction: column;
   position: fixed;
-   grid-template-rows: 1fr auto;
   gap: 20px;
   align-items: center;
   width: 100%;
