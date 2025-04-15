@@ -181,6 +181,7 @@ text-transform: uppercase;
   background-color: transparent;
   outline: 2px solid transparent;
   /*outline: none;*/
+
   display: flex;
   justify-content: center;
 }
@@ -456,7 +457,7 @@ p + p {
 }
 
 .dialog-button-OK {
-  
+  display: grid;
   align-items: center;
   max-width: 293px;
   max-height:38px;
