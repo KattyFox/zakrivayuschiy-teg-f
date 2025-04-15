@@ -513,11 +513,13 @@ p + p {
   opacity: 0%;
   transition: opacity 0.3s;
   transition-delay: 0.03s;
+  
 }
 
 .main-body{
   opacity: 0%;
   transition: opacity 0.3s;
+  
 }
 
 .sparks{
@@ -553,12 +555,14 @@ p + p {
   fill: var(--color-active);
   transition: fill 0.3s;
   transition-delay: 0.05s;
+  opacity: 1;
   
 }
 
 .like-icon.is-liked .core {
   fill: var(--color-active);
   transition: fill 0.3s;
+  opacity: 1;
   
 }
 
