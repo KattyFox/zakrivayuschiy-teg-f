@@ -11,12 +11,6 @@
 */
 
 
-body {
-  /*background-color: #fff;
-  margin: 0;
-  /*background-attachment: fixed;*/
-
-}
 
 .page {
   min-inline-size: 320px;
@@ -25,7 +19,7 @@ body {
   background-position: center;
   background-size: cover;
   width: 100%;
-  background-color: var(--body-pattern);
+  background-image: var(--body-pattern);
 }
 
 .page-section {
@@ -117,6 +111,7 @@ text-transform: uppercase;
   align-items: center;
   min-height: 100%;
   font-family: var(--inter-font, sans-serif);
+  
 }
 
 /* Обёртка для изображения чтоб задать водяной знак*/
@@ -341,6 +336,10 @@ outline: none;
 
 }
 
+.card__image-wrapper {
+  border-top: 2px solid #000;
+}
+
 .card__content {
   /*height: 224px;*/
   color: var(--main-text-color, #000);
@@ -350,6 +349,7 @@ outline: none;
   display: grid;
   gap: 25px;
   padding: 25px;
+  border-top: 2px solid #000;
 }
 
 
@@ -374,10 +374,13 @@ p.card__text {
 
 
 .icon-save-as {
+  position: relative;
+  z-index: 1;
   background-color: var(--bg-color);
   width: 21px;
   height: 21px;
   flex-grow: 0;
+ 
   
 
 
@@ -386,6 +389,7 @@ p.card__text {
     height: 28px;
   } 
 }
+
 
 .like-icon {
   background-color: var(--bg-color);
