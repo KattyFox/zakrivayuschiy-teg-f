@@ -75,6 +75,7 @@ text-transform: uppercase;
 }
 
 .card {
+  width: var(--page-section);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -101,11 +102,12 @@ text-transform: uppercase;
 h3.card__header-subtitle {
   align-self: flex-start;
   margin-left: 10px;
+  width: clamp(21.9375rem, 15.0933rem + 29.2019vw, 41.375rem);
   min-height: 100%;
   font-family: var(--inter-font, sans-serif);
   font-size: var(--main-font-size);
-  
 }
+
 
 /* Обёртка для изображения чтоб задать водяной знак*/
 .card__image-wrapper {
@@ -215,7 +217,14 @@ h3.card__header-subtitle {
   font-family: var(--press-font);
   background-color: var(--bg-color);
   cursor: pointer;
+
+  @media (width >= 375px) {
+    min-width: 126px;
+    padding: 9px 17px;
+  }
 }
+
+
 
 .card__like-button::before {
   content: '';
@@ -295,13 +304,14 @@ h3.card__header-subtitle {
   padding: 25px;
   /*border-top: 2px solid #000;*/
 
-  @media (width <= 375px) {
-    padding: 25px 26.5px 0 25px;
+  @media (width >= 375px) {
+    padding: 25px 29.5px 25px 25px;
+    line-height: 21px;
   }
 }
 
 p.card__text {
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 
 .card-buttons {

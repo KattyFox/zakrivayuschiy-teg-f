@@ -24,7 +24,7 @@
 --stroke-color: #000;
 --label-color: #fff;
 --label-blend-mode: hard-light;
---page-section: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+--page-section: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);;
 --sparks-color: red;
 --countour-color: black;
 --core-color:black;
