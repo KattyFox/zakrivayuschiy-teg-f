@@ -19,12 +19,12 @@
 --text-stroke-color: #fff;
 --hover-text-button-color: #fff;
 --hover-bg-button-color: #000;
-
+--body-pattern: repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px), repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px), linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
 --animation-fill-color: rgb(255 0 0);
 --stroke-color: #000;
 --label-color: #fff;
 --label-blend-mode: hard-light;
-
+--page-section: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
 --sparks-color: red;
 --countour-color: black;
 --core-color:black;

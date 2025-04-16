@@ -12,7 +12,7 @@
 
 
 body {
-  background-color: #fff;
+  /*background-color: #fff;
   margin: 0;
   /*background-attachment: fixed;*/
 
@@ -25,20 +25,14 @@ body {
   background-position: center;
   background-size: cover;
   width: 100%;
-  background-color: var(--bg-color);
-  
+  background-color: var(--body-pattern);
 }
 
-.image {
-  /*background-image: url(../images/background.png);*/
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  width: 100%;
-  background-position: top;
-  /*aspect-ratio: 1440 / 960;*/
-  /*height: clamp(667px, calc(667px + (960 - 667) * ((100vw - 375px) / (1440 - 375))), 960px);
-  background-size: clamp(357px, 100%, 1440px) clamp(667px, calc(667px + (960 - 667) * ((100vw - 375px) / (1440 - 375))), 960px);*/
+.page-section {
+  inline-size: var(--page-section);
+  margin: auto;
 }
+
 
 
 
@@ -49,8 +43,8 @@ body {
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  width: clamp(371px, 50vw + 100px, 696px);
-  height: clamp(323px, 3.85vw + 308.56px, 364px);
+  width: var(--page-section);
+  padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) 0 clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   background-color: var(--bg-color, #fff);
   border: 2px solid #000;
   margin: 102px auto 104px;
@@ -94,7 +88,7 @@ text-transform: uppercase;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: clamp(371px, 50vw + 100px, 696px);
+  /*width: clamp(371px, 50vw + 100px, 696px);*/
   border: 2px solid #000;
   background-color: #fff;
   margin:  auto;
@@ -179,11 +173,17 @@ text-transform: uppercase;
 
 .card__icon-button{
   background-color: transparent;
-  outline: 2px solid transparent;
-  /*outline: none;*/
-
+  border: 2px solid transparent;
   display: flex;
   justify-content: center;
+}
+
+.card__icon-button:focus-visible {
+outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid #000;
 }
 
 .button_type_save {
@@ -283,6 +283,9 @@ text-transform: uppercase;
 
 .button:focus {
   outline: none;
+}
+
+.button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
@@ -324,6 +327,7 @@ p + p {
   line-height: var(--button-line-height);
   margin-bottom: 25px;
   width: 100%;
+  gap: 5px;
 }
 
 .card__like-button {
@@ -457,7 +461,7 @@ p + p {
 }
 
 .dialog-button-OK {
-  display: grid;
+  display: flex;
   align-items: center;
   max-width: 293px;
   max-height:38px;
@@ -607,5 +611,6 @@ p + p {
   to {
     opacity: 100%;
   }
-}
 
+
+}
