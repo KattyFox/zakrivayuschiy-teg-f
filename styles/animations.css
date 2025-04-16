@@ -17,14 +17,12 @@
   transition: fill 0.3s;
   transition-delay: 0.05s;
   opacity: 1;
-  
 }
 
 .like-icon.is-liked .core {
   fill: var(--color-active);
   transition: fill 0.3s;
   opacity: 1;
-  
 }
 
 .like-icon.is-liked .countour {
@@ -38,7 +36,7 @@
   animation-duration: 0.3s;
   animation-delay: 0.1s;
   animation-timing-function : ease-in;
-  transform-origin: 50% 50%;  
+  transform-origin: 50% 50%;
 }
 
 .like-icon.is-liked .sparks {
@@ -65,6 +63,4 @@
   to {
     opacity: 100%;
   }
-
-
 }
