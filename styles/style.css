@@ -424,6 +424,7 @@ p.card__text {
 .svg-save-as {
   width: 39px;
   height: 39px;
+  flex-shrink: 0;
 }
 
 .dialog-button-OK {
