@@ -329,12 +329,12 @@ p.card__text {
   }
 }
 
-.like-icon {
+/*.like-icon {
   background-color: var(--bg-color);
   width: 27px;
   height: 24px;
  
-}
+}*/
 
 .page-footer {
   margin-bottom: 25px;
@@ -452,6 +452,7 @@ p.card__text {
 /*effects for heart*/
 
 .like-icon {
+  background-color: var(--bg-color);
   width: 40px;
   height: 40px;
 }
