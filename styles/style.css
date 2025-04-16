@@ -108,17 +108,15 @@ h3.card__header-subtitle {
 }
 
 /* Обёртка для изображения чтоб задать водяной знак*/
-.card__image-container {
+.card__image-wrapper {
+  display: inline-block;
   position: relative;
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 /* Лейбл HTML */
 .card__label {
   position: absolute;
-  top: 60px;
+  top: 25px;
   right: 25px;
   font-family: var(--press-font), sans-serif;
   font-weight: 700;
@@ -136,21 +134,10 @@ h3.card__header-subtitle {
     0 2px 0 var(--label-stroke),
     0 -2px 0 var(--label-stroke);
 
-    @media (width >= 1440px) {
-      .card__watermark {
-        top: 25px;
-        right: 25px;
-        font-size: 14px;
-      }
-    }
-
     @media (width <= 375px) {
-      .card__watermark {
-        top: 23px;
-        right: 11px;
-        font-size: 14px;
-      }
-   }
+      top: 25px;
+      right: 11px;
+    }
 }
 
 @supports ((-webkit-text-stroke: 1px var(--text-stroke-color)) or (text-stroke: 1px var(--text-stroke-color))) {
