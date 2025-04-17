@@ -139,7 +139,7 @@ h3.card__header-subtitle {
     2px 0 0 var(--label-stroke),
     -2px 0 0 var(--label-stroke),
     0 2px 0 var(--label-stroke),
-    0 -2px 0 var(--label-stroke);   
+    0 -2px 0 var(--label-stroke);
 }
 
 @supports ((-webkit-text-stroke: 1px var(--text-stroke-color)) or (text-stroke: 1px var(--text-stroke-color))) {
