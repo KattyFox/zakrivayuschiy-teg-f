@@ -11,6 +11,7 @@
 */
 
 .page {
+  padding-top: 100px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   position: relative;
@@ -34,13 +35,17 @@
   max-width: 100%;
   width: var(--page-section);
   padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) 0 clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  
   background-color: var(--bg-color, #fff);
   border: 2px solid #000;
-  margin: 102px auto 104px;
+  margin-bottom: 107px;
   font-family: var(--press-font);
   line-height: var(--header-line-height);
   color: black;
 
+  @media (width >= 375px) {
+    margin-bottom: 101px;
+  }
 
 }
 
@@ -91,20 +96,23 @@ text-transform: uppercase;
 
 .card__header {
   display: flex;
-  padding: 2px 0;
-  min-height: 31px;
+  padding: 5px 0;
   width: 100%;
   justify-content: flex-start;
   color: var(--main-text-color, #000);
+
+  /*@media (width >= 375px) {
+    height: clamp(3.25rem, 3.7121rem + -1.9718vw, 1.9375rem);
+  }*/
 }
 
 h3.card__header-subtitle {
-  align-self: flex-start;
+  /*align-self: flex-start;*/
   margin-left: 10px;
-  width: clamp(21.9375rem, 15.0933rem + 29.2019vw, 41.375rem);
-  min-height: 100%;
+  /*width: clamp(21.9375rem, 15.0933rem + 29.2019vw, 41.375rem);*/
   font-family: var(--inter-font, sans-serif);
   font-size: var(--main-font-size);
+  
 }
 
 
@@ -117,14 +125,14 @@ h3.card__header-subtitle {
 /* Лейбл HTML */
 .card__label {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: clamp(1.4375rem, 1.3935rem + 0.1878vw, 1.5625rem);
+  right: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
   font-family: var(--press-font), sans-serif;
   font-weight: 700;
   font-size: var(--wt-font-size);
   line-height: 1;
   color: var(--accent-color);
-  mix-blend-mode: var(--label-blend-mode);
+  /*mix-blend-mode: var(--label-blend-mode);*/
   z-index: 2;
   opacity: 0.5;
   letter-spacing: 0;
@@ -134,11 +142,7 @@ h3.card__header-subtitle {
     -2px 0 0 var(--label-stroke),
     0 2px 0 var(--label-stroke),
     0 -2px 0 var(--label-stroke);
-
-    @media (width <= 375px) {
-      top: 25px;
-      right: 11px;
-    }
+     
 }
 
 @supports ((-webkit-text-stroke: 1px var(--text-stroke-color)) or (text-stroke: 1px var(--text-stroke-color))) {
@@ -206,9 +210,9 @@ h3.card__header-subtitle {
 }
 
 .card__like-button {
-  min-width: 130px;
+  /*min-width: 130px;*/
   position: relative;
-  padding: 9px 17px;
+  /*padding: 9px 17px;*/
   justify-content: center;
   gap: 12px;
   border: 2px solid var(--contur-color, #000);
@@ -218,7 +222,7 @@ h3.card__header-subtitle {
   cursor: pointer;
 
   @media (width >= 375px) {
-    min-width: 126px;
+    min-width: 123px;
     padding: 9px 17px;
   }
 }
@@ -287,12 +291,14 @@ h3.card__header-subtitle {
 }
 
 .card__image {
-  display: block;
+  /*display: block;*/
   inline-size: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   aspect-ratio: 1 /1;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 
 }
 
@@ -301,9 +307,9 @@ h3.card__header-subtitle {
   font-family: var(--inter-font);
   gap: 25px;
   padding: 25px;
-  /*border-top: 2px solid #000;*/
+  border-top: 2px solid transparent;
 
-  @media (width >= 375px) {
+    @media (width >= 375px) {
     padding: 25px 29.5px 25px 25px;
     line-height: 21px;
   }
