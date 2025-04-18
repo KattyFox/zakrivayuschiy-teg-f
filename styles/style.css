@@ -39,7 +39,7 @@
   background-color: var(--bg-color, #fff);
   border: 2px solid #000;
   margin-bottom: 107px;
-  font-family: var(--press-font);
+  font-family: var(--accent-font);
   line-height: var(--header-line-height);
   color: black;
 
@@ -50,8 +50,8 @@
 }
 
 h1 {
-font-family: var(--press-font);
-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+font-family: var(--accent-font);
+font-size: var(--header-font-size);
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -60,8 +60,8 @@ margin-bottom: 20px;
 }
 
 h2 {
-font-family: var(--press-font);
-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+font-family: var(--accent-font);
+font-size: var(--header-accent-font-size);
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -91,7 +91,7 @@ text-transform: uppercase;
   font-size: var(--main-font-size, 18px);
   font-weight: var(--font-weight);
   line-height: var(--main-line-height, 21px);
-  font-family: var(--inter-font);
+  font-family: var(--main-font);
 }
 
 .card__header {
@@ -110,7 +110,7 @@ h2.card__header-subtitle {
   /*align-self: flex-start;*/
   margin-left: 10px;
   /*width: clamp(21.9375rem, 15.0933rem + 29.2019vw, 41.375rem);*/
-  font-family: var(--inter-font, sans-serif);
+  font-family: var(--main-font, sans-serif);
   font-size: var(--main-font-size);
   text-transform: none;
   font-weight: 700;
@@ -127,7 +127,7 @@ h2.card__header-subtitle {
   position: absolute;
   top: clamp(1.4375rem, 1.3935rem + 0.1878vw, 1.5625rem);
   right: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
-  font-family: var(--press-font), sans-serif;
+  font-family: var(--accent-font), sans-serif;
   font-weight: 700;
   font-size: var(--wt-font-size);
   line-height: 1;
@@ -180,7 +180,7 @@ h2.card__header-subtitle {
   margin: 54px auto 105px;
   background-color: var(--bg-color);
   border: 2px solid var(--border-card-color, #000);
-  font-family: var(--press-font);
+  font-family: var(--accent-font);
   font-size: var(--button-font-size);
   line-height: var(--button-line-height);
   padding: 10px;
@@ -198,7 +198,7 @@ h2.card__header-subtitle {
   display: flex;
   font-size: var(--button-font-size);
   line-height: var(--button-line-height);
-  font-family: var(--press-font);
+  font-family: var(--accent-font);
   justify-content: center;
   align-items: center;
   color: var(--bg-color);
@@ -215,7 +215,7 @@ h2.card__header-subtitle {
   gap: 12px;
   border: 2px solid var(--contur-color, #000);
   color: var(--main-text-color);
-  font-family: var(--press-font);
+  font-family: var(--accent-font);
   background-color: var(--bg-color);
   cursor: pointer;
 
@@ -396,7 +396,7 @@ p.card__text {
   border: 2px solid var(--accent-color);
   color: var(--main-text-color);
   font-size: var(--button-font-size);
-  font-family: var(--press-font);
+  font-family: var(--accent-font);
   gap: 30px 20px;
   padding: 30px;
   align-items: center;
