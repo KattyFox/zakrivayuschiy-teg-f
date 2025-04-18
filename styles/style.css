@@ -54,7 +54,7 @@ h1 {
   font-family: var(--accent-font);
   font-size: var(--header-font-size);
   font-style: normal;
-  font-weight: 400;
+  font-variation-settings: 'wght' var(--main-wght);
   line-height: normal;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -64,7 +64,7 @@ h2 {
   font-family: var(--accent-font);
   font-size: var(--header-accent-font-size);
   font-style: normal;
-  font-weight: 400;
+  font-variation-settings: 'wght' var(--main-wght);
   line-height: normal;
   text-transform: uppercase;
 }
@@ -74,10 +74,11 @@ h2 {
   flex-direction: column;
   gap: 49px;
 
-  @media (width <= 375px) {
+  @media (width >= 375px) {
     gap: 50px;
   }
 }
+
 
 .card {
   width: var(--page-section);
@@ -90,7 +91,7 @@ h2 {
   background-color: #fff;
   margin: auto;
   font-size: var(--main-font-size, 18px);
-  font-weight: var(--font-weight);
+  font-variation-settings: 'wght' var(--main-wght);
   line-height: var(--main-line-height, 21px);
   font-family: var(--main-font);
 }
@@ -114,7 +115,7 @@ h2.card__header-subtitle {
   font-family: var(--main-font, sans-serif);
   font-size: var(--main-font-size);
   text-transform: none;
-  font-weight: 700;
+  font-variation-settings: 'wght' var(--accent-wght);
 }
 
 /* Обёртка для изображения чтоб задать водяной знак*/
@@ -129,7 +130,7 @@ h2.card__header-subtitle {
   top: clamp(1.4375rem, 1.3935rem + 0.1878vw, 1.5625rem);
   right: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
   font-family: var(--accent-font), sans-serif;
-  font-weight: 700;
+  font-variation-settings: 'wght' var(--accent-wght);
   font-size: var(--wt-font-size);
   line-height: 1;
   color: var(--accent-color);
@@ -161,15 +162,20 @@ h2.card__header-subtitle {
   font-size: var(--button-font-size);
   line-height: var(--button-line-height);
   width: 100%;
-  gap: 12px;
+  gap: 5px;
 }
 
 .card__icon-button {
-  display: ;
+  display: flex;
   background-color: transparent;
   border: 2px solid transparent;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 0;
+  block-size: 39px;
+
+
 }
 
 .card__icon-button:focus {
@@ -193,7 +199,7 @@ h2.card__header-subtitle {
   cursor: pointer;
 
   @media (width >= 375px) {
-    min-width: 123px;
+    min-width: 128px;
     padding: 9px 17px;
   }
 }
@@ -212,14 +218,7 @@ h2.card__header-subtitle {
   z-index: 1;
 }
 
-.icon-save-as::before {
-  content: "";
-  position: relative;
-  fill: #fff;
-  mix-blend-mode: difference;
-  transition: color 0.1s;
-  z-index: 2;
-}
+
 
 .card__like-button:hover::before {
   transform: scaleX(1);
@@ -248,7 +247,7 @@ h2.card__header-subtitle {
     80px - (80 - 51) * ((100vw - 375px) / (1440 - 375)),
     80px
   );
-  margin: 54px auto 105px;
+  margin: 4px auto 105px;
   background-color: var(--bg-color);
   border: 2px solid var(--border-card-color, #000);
   font-family: var(--accent-font);
@@ -340,8 +339,8 @@ h2.card__header-subtitle {
   border-top: 2px solid transparent;
 
   @media (width >= 375px) {
-    padding: 25px 29.5px 25px 25px;
-    line-height: 21px;
+    padding: 25px 24.5px 25px 25px;
+    line-height: 20.5px;
   }
 }
 
@@ -351,19 +350,7 @@ p.card__text {
 
 
 
-.icon-save-as {
-  position: relative;
-  z-index: 1;
-  background-color: var(--bg-color);
-  width: 21px;
-  height: 21px;
-  flex-grow: 0;
 
-  @media (width <= 375px) {
-    width: 28px;
-    height: 28px;
-  }
-}
 
 
 
@@ -425,11 +412,29 @@ p.card__text {
   display: grid;
 }
 
-.svg-save-as {
+.icon-save-as {
   width: 39px;
   height: 39px;
-  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  fill: var(--bg-color);
   mix-blend-mode: difference;
+  flex-shrink: 0;
+
+  @media (width >= 375px) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+
+.icon-save-as::before {
+  content: "";
+  position: relative;
+  /*fill: #fff;*/
+  /*mix-blend-mode: difference;*/
+  transition: color 0.1s;
+  z-index: 2;
 }
 
 .dialog-button-OK {
@@ -447,9 +452,9 @@ p.card__text {
 .dialog-text {
   line-height: 1.5;
 
-  @media (width <=375px) {
+  /*@media (width >=375px) {
     padding: 32px 42px 0 101px;
-  }
+  }*/
 }
 
 .dialog::backdrop {
@@ -461,9 +466,10 @@ p.card__text {
 .like-icon {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: var(--bg-color);
-  width: 40px;
-  height: 40px;
+  width: 39px;
+  height: 39px;
 }
 
 .countour {
