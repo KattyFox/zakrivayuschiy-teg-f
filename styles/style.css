@@ -173,7 +173,6 @@ h2.card__header-subtitle {
   display: flex;
   background-color: transparent;
   border: 2px solid transparent;
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
@@ -261,7 +260,7 @@ h2.card__header-subtitle {
 }
 
 .button_type_save:hover::before,
-.dialog-button-OK:hover::before  {
+.dialog-button-OK:hover::before {
   transform: scaleX(1);
 }
 
