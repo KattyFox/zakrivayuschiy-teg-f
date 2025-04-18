@@ -106,13 +106,14 @@ text-transform: uppercase;
   }*/
 }
 
-h3.card__header-subtitle {
+h2.card__header-subtitle {
   /*align-self: flex-start;*/
   margin-left: 10px;
   /*width: clamp(21.9375rem, 15.0933rem + 29.2019vw, 41.375rem);*/
   font-family: var(--inter-font, sans-serif);
   font-size: var(--main-font-size);
-  
+  text-transform: none;
+  font-weight: 700;
 }
 
 /* Обёртка для изображения чтоб задать водяной знак*/
@@ -336,9 +337,7 @@ p.card__text {
   }
 }
 
-.page-footer {
-  margin-bottom: 25px;
-}
+
 
 .card__header-subtitle,
 .card__text {
