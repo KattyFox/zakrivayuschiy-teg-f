@@ -177,7 +177,7 @@ h2.card__header-subtitle {
   justify-content: center;
   align-items: center;
   padding: 0;
-  block-size: 36px;
+  block-size: 39px;
   transition: border 0.3s ease;
 }
 
@@ -245,7 +245,8 @@ h2.card__header-subtitle {
 }
 
 .card__like-button::before,
-.button_type_save::before {
+.button_type_save::before,
+.dialog-button-OK::before {
   content: "";
   position: absolute;
   top: 0;
@@ -259,9 +260,11 @@ h2.card__header-subtitle {
   z-index: 1;
 }
 
-.button_type_save:hover::before {
+.button_type_save:hover::before,
+.dialog-button-OK:hover::before  {
   transform: scaleX(1);
 }
+
 
 .button__text::before {
   content: "";
@@ -405,13 +408,21 @@ p.card__text {
 }
 
 .dialog-button-OK {
+  position: relative;
+  overflow: hidden;
   align-items: center;
   border: 2px solid #000;
-  background-color: transparent;
+  background-color: var(--bg-color);
   text-align: center;
   padding: 9px 17px;
   width: 100%;
   grid-column: 1 / -1;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  font-family: var(--accent-font);
+  font-size: var(--button-font-size);
+  text-transform: uppercase;
 }
 
 .dialog-text {
