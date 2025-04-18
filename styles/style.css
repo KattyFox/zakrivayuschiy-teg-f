@@ -177,10 +177,9 @@ h2.card__header-subtitle {
   justify-content: center;
   align-items: center;
   padding: 0;
-  block-size: 39px;
+  block-size: 36px;
+  transition: border 0.3s ease;
 }
-
-
 
 .card__like-button {
   min-width: 130px;
@@ -189,6 +188,7 @@ h2.card__header-subtitle {
   justify-content: center;
   gap: 12px;
   background-color: var(--bg-color);
+
 
   @media (width >= 375px) {
     min-width: 128px;
@@ -272,19 +272,20 @@ h2.card__header-subtitle {
 }
 
 .button:focus,
-.card__icon-button {
+.card__icon-button:focus {
   outline: none;
-}
-
-.button:focus-visible,
-.like-icon:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--accent-color);
+  border: 2px solid transparent;
 }
 
 .card__icon-button:focus-visible {
-  border: 2px solid var(--accent-color);
-  transition: var(--accent-color) 0.3s ease;
+  outline: 2px solid var(--accent-color);
 }
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
 
 .button-close {
   background-color: transparent;
