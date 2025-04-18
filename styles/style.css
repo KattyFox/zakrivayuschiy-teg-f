@@ -272,7 +272,7 @@ h2.card__header-subtitle {
 }
 
 .button:focus,
-.like-icon {
+.card__icon-button {
   outline: none;
 }
 
@@ -282,7 +282,8 @@ h2.card__header-subtitle {
 }
 
 .card__icon-button:focus-visible {
-  border: 2px solid var(--contur-color, #000);
+  border: 2px solid var(--accent-color);
+  transition: var(--accent-color) 0.3s ease;
 }
 
 .button-close {
