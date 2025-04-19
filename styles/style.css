@@ -40,12 +40,12 @@
 
   background-color: var(--bg-color, #fff);
   border: 2px solid #000;
-  margin-bottom: 107px;
+  margin-bottom: 101px;
   font-family: var(--accent-font);
   line-height: var(--header-line-height);
   color: black;
 
-  @media (width >= 375px) {
+  @media (width <= 376px) {
     margin-bottom: 101px;
   }
 }
@@ -74,7 +74,7 @@
   flex-direction: column;
   gap: 49px;
 
-  @media (width >= 375px) {
+  @media (width <= 375px) {
     gap: 50px;
   }
 }
@@ -134,8 +134,8 @@ h2.card__header-subtitle {
   opacity: 0.5;
   letter-spacing: 0;
 
-  text-shadow: 2px 0 0 var(--label-stroke), -2px 0 0 var(--label-stroke),
-    0 2px 0 var(--label-stroke), 0 -2px 0 var(--label-stroke);
+  text-shadow: 2px 0 0 var(--stroke-color), -2px 0 0 var(--stroke-color),
+    0 2px 0 var(--stroke-color), 0 -2px 0 var(--stroke-color);
 }
 
 @supports (
@@ -172,12 +172,13 @@ h2.card__header-subtitle {
 .card__icon-button {
   display: flex;
   background-color: transparent;
-  border: 2px solid transparent;
+  outline: 2px solid transparent;
   justify-content: center;
   align-items: center;
   padding: 0;
   block-size: 39px;
   transition: outline-color 0.3s ease;
+  border: transparent;
 }
 
 .card__like-button {
@@ -189,7 +190,7 @@ h2.card__header-subtitle {
   background-color: var(--bg-color);
 
 
-  @media (width >= 375px) {
+  @media (width <= 375px) {
     min-width: 128px;
     padding: 9px 17px;
   }
@@ -207,16 +208,8 @@ h2.card__header-subtitle {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  width: clamp(
-    306px,
-    306px + (335 - 306) * ((100vw - 375px) / (1440 - 375)),
-    335px
-  );
-  height: clamp(
-    51px,
-    80px - (80 - 51) * ((100vw - 375px) / (1440 - 375)),
-    80px
-  );
+  width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
+  height: clamp(51px, 80px - (80 - 51) * ((100vw - 375px) / (1440 - 375)), 80px);
   margin: 2px auto 105px;
   background-color: var(--bg-color);
   border: 2px solid var(--border-card-color, #000);
@@ -276,7 +269,7 @@ h2.card__header-subtitle {
 .button:focus,
 .card__icon-button:focus {
   outline: none;
-  border: 2px solid transparent;
+  /*border: 2px solid transparent;*/
 }
 
 .card__icon-button:focus-visible {
@@ -285,7 +278,7 @@ h2.card__header-subtitle {
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-color);
-  border: 2px solid var(--accent-color);
+  
 }
 
 
@@ -316,7 +309,7 @@ h2.card__header-subtitle {
   padding: 25px;
   border-top: 2px solid transparent;
 
-  @media (width >= 375px) {
+  @media (width <= 375px) {
     padding: 25px 24.5px 25px 25px;
     line-height: 20.5px;
   }
@@ -336,7 +329,7 @@ p.card__text {
   filter: saturate(180%) hue-rotate(15deg);
 }
 
-.image-evening {
+.image-dark-orange {
   filter: contrast(150%) brightness(190%) grayscale(10%) sepia(50%)
     hue-rotate(10deg);
 }
@@ -374,7 +367,7 @@ p.card__text {
   padding: 30px;
   align-items: center;
 
-  @media (width >= 375px) {
+  @media (width <= 375px) {
     inline-size: 341px;
     padding: 30px;
   }
@@ -393,7 +386,7 @@ p.card__text {
   mix-blend-mode: difference;
   flex-shrink: 0;
 
-  @media (width <= 375px) {
+  @media (width <= 376px) {
     width: 28px;
     height: 28px;
   }
