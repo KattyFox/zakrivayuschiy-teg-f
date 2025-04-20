@@ -20,13 +20,12 @@
   width: 100%;
   background-image: var(--body-pattern);
   background-attachment: fixed;
-  
 }
 
 .page-section {
   inline-size: var(--page-section);
   margin: auto;
-  font-variation-settings: 'wgt' var(--main-wght, 400)
+  font-variation-settings: "wgt" var(--main-wght, 400);
 }
 
 .header {
@@ -38,12 +37,12 @@
   max-width: 100%;
   width: var(--page-section);
   padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) 0
-          clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+    clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   background-color: var(--bg-color, #fff);
   border: 2px solid #000;
   margin-bottom: 101px;
   font-family: var(--accent-font);
-  font-variation-settings: 'wght' var(--main-wght, 400);
+  font-variation-settings: "wght" var(--main-wght, 400);
   text-transform: uppercase;
   font-style: normal;
   line-height: var(--header-line-height);
@@ -86,7 +85,7 @@
   background-color: #fff;
   margin: auto;
   font-size: var(--main-font-size, 18px);
-  font-variation-settings: 'wght' var(--main-wght);
+  font-variation-settings: "wght" var(--main-wght);
   line-height: var(--main-line-height, 21px);
   font-family: var(--main-font);
 }
@@ -104,7 +103,7 @@ h2.card__header-subtitle {
   font-family: var(--main-font, sans-serif);
   font-size: var(--main-font-size);
   text-transform: none;
-  font-variation-settings: 'wght' var(--accent-wght);
+  font-variation-settings: "wght" var(--accent-wght);
 }
 
 /* Обёртка для изображения чтоб задать водяной знак*/
@@ -119,7 +118,7 @@ h2.card__header-subtitle {
   top: clamp(1.4375rem, 1.3935rem + 0.1878vw, 1.5625rem);
   right: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
   font-family: var(--accent-font), sans-serif;
-  font-variation-settings: 'wght' var(--accent-wght);
+  font-variation-settings: "wght" var(--accent-wght);
   font-size: var(--wt-font-size);
   line-height: 1;
   color: var(--accent-color);
@@ -127,8 +126,9 @@ h2.card__header-subtitle {
   opacity: 0.5;
   letter-spacing: 0;
 
-  text-shadow: 2px 0 0 var(--text-stroke-color), -2px 0 0 var(--text-stroke-color),
-    0 2px 0 var(--text-stroke-color), 0 -2px 0 var(--text-stroke-color);
+  text-shadow: 2px 0 0 var(--text-stroke-color),
+    -2px 0 0 var(--text-stroke-color), 0 2px 0 var(--text-stroke-color),
+    0 -2px 0 var(--text-stroke-color);
 }
 
 @supports (
@@ -153,7 +153,6 @@ h2.card__header-subtitle {
   border: 2px solid var(--contur-color, #000);
   min-width: 130px;
   position: relative;
-  padding: 9px 17px;
   justify-content: center;
   gap: 12px;
   background-color: var(--bg-color);
@@ -186,24 +185,23 @@ h2.card__header-subtitle {
 }
 
 .card__like-button {
-
   @media (width <= 376px) {
     min-width: 128px;
     padding: 9px 17px;
   }
 }
 
-.button:hover::before,
-.dialog-button-ok:hover::before {
+.button:hover::before {
   transform: scaleX(1);
 }
 
 .button_type_save {
   margin: 2px auto 105px;
-  padding: 14px 20px;
+  padding: 15px 20px;
 
   @media (width >= 900px) {
     flex-direction: row;
+    padding: 14px 20px;
   }
 }
 
@@ -222,8 +220,7 @@ h2.card__header-subtitle {
   z-index: 2;
 }
 
-.button::before,
-.dialog-button-ok::before {
+.button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -236,9 +233,6 @@ h2.card__header-subtitle {
   transition: transform 0.5s ease-in-out;
   z-index: 1;
 }
-
-
-
 
 .button__text::before {
   content: "";
@@ -260,7 +254,6 @@ h2.card__header-subtitle {
 .button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-color);
 }
-
 
 .button-close {
   background-color: transparent;
@@ -318,7 +311,7 @@ p.card__text {
   filter: hue-rotate(-45deg) brightness(105%) saturate(130%);
 }
 
-.image-darkness {
+.image-dark-brown {
   filter: sepia(90%) hue-rotate(15deg) contrast(110%);
 }
 
