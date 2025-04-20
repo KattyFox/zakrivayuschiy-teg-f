@@ -38,7 +38,7 @@
   max-width: 100%;
   width: var(--page-section);
   padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem) 0
-    clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+          clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   background-color: var(--bg-color, #fff);
   border: 2px solid #000;
   margin-bottom: 101px;
@@ -46,7 +46,6 @@
   font-variation-settings: 'wght' var(--main-wght, 400);
   text-transform: uppercase;
   font-style: normal;
-
   line-height: var(--header-line-height);
   color: black;
 
@@ -64,7 +63,6 @@
 .sub-header {
   font-size: var(--header-accent-font-size);
   line-height: 100%;
-  
 }
 
 .cards__block {
@@ -72,11 +70,10 @@
   flex-direction: column;
   gap: 49px;
 
-  @media (width <= 375px) {
+  @media (width <= 376px) {
     gap: 50px;
   }
 }
-
 
 .card {
   width: var(--page-section);
@@ -103,9 +100,7 @@
 }
 
 h2.card__header-subtitle {
-  /*align-self: flex-start;*/
   margin-left: 10px;
-  /*width: clamp(21.9375rem, 15.0933rem + 29.2019vw, 41.375rem);*/
   font-family: var(--main-font, sans-serif);
   font-size: var(--main-font-size);
   text-transform: none;
@@ -168,7 +163,6 @@ h2.card__header-subtitle {
   align-items: center;
   gap: 8px;
   line-height: var(--button-line-height);
-
 }
 
 .card-buttons {
@@ -193,27 +187,19 @@ h2.card__header-subtitle {
 
 .card__like-button {
 
-
-
-  @media (width <= 375px) {
+  @media (width <= 376px) {
     min-width: 128px;
     padding: 9px 17px;
   }
 }
 
-.card__like-button:hover::before {
+.button:hover::before,
+.dialog-button-ok:hover::before {
   transform: scaleX(1);
 }
 
 .button_type_save {
-  /*position: relative;*/
-  /*overflow: hidden;*/
-  
-  /*width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
-  height: clamp(51px, 80px - (80 - 51) * ((100vw - 375px) / (1440 - 375)), 80px);*/
   margin: 2px auto 105px;
-  /*background-color: var(--bg-color);*/
-  /*border: 2px solid var(--border-card-color, #000);*/
   padding: 14px 20px;
 
   @media (width >= 900px) {
@@ -251,10 +237,7 @@ h2.card__header-subtitle {
   z-index: 1;
 }
 
-.button_type_save:hover::before,
-.dialog-button-ok:hover::before {
-  transform: scaleX(1);
-}
+
 
 
 .button__text::before {
@@ -306,7 +289,7 @@ h2.card__header-subtitle {
   padding: 25px;
   border-top: 2px solid transparent;
 
-  @media (width <= 375px) {
+  @media (width <= 376px) {
     padding: 25px 24.5px 25px 25px;
     line-height: 20.5px;
   }
@@ -364,7 +347,7 @@ p.card__text {
   padding: 30px;
   align-items: center;
 
-  @media (width <= 375px) {
+  @media (width <= 376px) {
     inline-size: 341px;
     padding: 30px;
   }
