@@ -20,12 +20,13 @@
   width: 100%;
   background-image: var(--body-pattern);
   background-attachment: fixed;
-  font-variation-settings: 'wgt' var(--main-wght)
+  
 }
 
 .page-section {
   inline-size: var(--page-section);
   margin: auto;
+  font-variation-settings: 'wgt' var(--main-wght, 400)
 }
 
 .header {
@@ -42,6 +43,10 @@
   border: 2px solid #000;
   margin-bottom: 101px;
   font-family: var(--accent-font);
+  font-variation-settings: 'wght' var(--main-wght, 400);
+  text-transform: uppercase;
+  font-style: normal;
+
   line-height: var(--header-line-height);
   color: black;
 
@@ -51,22 +56,15 @@
 }
 
 .main-header {
-  font-family: var(--accent-font);
   font-size: var(--header-font-size);
-  font-style: normal;
-  font-variation-settings: 'wght' var(--main-wght, 400);
-  line-height: normal;
-  text-transform: uppercase;
+  line-height: 100%;
   margin-bottom: 20px;
 }
 
 .sub-header {
-  font-family: var(--accent-font);
   font-size: var(--header-accent-font-size);
-  font-style: normal;
-  font-variation-settings: 'wght' var(--main-wght, 400);
-  line-height: normal;
-  text-transform: uppercase;
+  line-height: 100%;
+  
 }
 
 .cards__block {
