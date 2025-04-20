@@ -158,7 +158,6 @@ h2.card__header-subtitle {
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 8px;
   line-height: var(--button-line-height);
